@@ -1,0 +1,69 @@
+@use "sass:map";
+
+
+$main-color: #f196ce;
+$text-color: #333;
+$font-family: "Noto Sans JP", sans-serif;
+
+$breakpoints: (
+  sm: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 900px)",
+  xl: "screen and (min-width: 1220px)",
+);
+
+@mixin mq($breakpoint: md) {
+    @media #{map.get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: $header-hight-sp;
+  
+    @include mq(md) {
+      scroll-padding-top: $header-hight-pc;
+    }
+  }
+  
+  body {
+    font-family: $font-base;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  //共通クラス
+
+@include mq(sm) {
+    .hidden-sm {
+      display: none;
+    }
+  }
+  @include mq(md) {
+    .hidden-md {
+      display: none;
+    }
+  }
+  @include mq(lg) {
+    .hidden-lg {
+      display: none;
+    }
+  }
+  @include mq(xl) {
+    .hidden-xl {
+      display: none;
+    }
+  }
+  
+  .inner {
+    padding-inline: 15px;
+  
+    @include mq(md) {
+      max-width: calc(1200px + 40px * 2);
+      margin-inline: auto;
+      padding-inline: 40px;
+    }
+  }
