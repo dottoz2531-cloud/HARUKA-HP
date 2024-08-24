@@ -1,10 +1,12 @@
 @use "sass:map";
 
+$main-color: #ffeff8;
+$text-color: #9a8b92;
 
-$main-color: #FFEFF8;
-$sub-color:#FA81B4;
-$text-color: #9A8B92;
-$font-family: "Noto Sans JP", sans-serif;
+$font-base: "Noto Serif JP", "Poppins";
+
+$header-hight-sp: 60px;
+$header-hight-pc: 70px;
 
 $breakpoints: (
   sm: "screen and (min-width: 600px)",
@@ -14,57 +16,58 @@ $breakpoints: (
 );
 
 @mixin mq($breakpoint: md) {
-    @media #{map.get($breakpoints, $breakpoint)} {
-      @content;
-    }
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
   }
+}
 
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: $header-hight-sp;
-  
-    @include mq(md) {
-      scroll-padding-top: $header-hight-pc;
-    }
-  }
-  
-  body {
-    font-family: $font-base;
-    color: $text-color;
-    font-size: 16px;
-    line-height: 1.7;
-    font-weight: 300;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-hight-sp;
 
-  //共通クラス
+  @include mq(md) {
+    scroll-padding-top: $header-hight-pc;
+  }
+}
+
+body {
+  font-family: $font-base;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  background: $main-color;
+}
+
+//共通クラス
 
 @include mq(sm) {
-    .hidden-sm {
-      display: none;
-    }
+  .hidden-sm {
+    display: none;
   }
+}
+@include mq(md) {
+  .hidden-md {
+    display: none;
+  }
+}
+@include mq(lg) {
+  .hidden-lg {
+    display: none;
+  }
+}
+@include mq(xl) {
+  .hidden-xl {
+    display: none;
+  }
+}
+
+.inner {
+  padding-inline: 15px;
+
   @include mq(md) {
-    .hidden-md {
-      display: none;
-    }
+    max-width: calc(1200px + 40px * 2);
+    margin-inline: auto;
+    padding-inline: 40px;
   }
-  @include mq(lg) {
-    .hidden-lg {
-      display: none;
-    }
-  }
-  @include mq(xl) {
-    .hidden-xl {
-      display: none;
-    }
-  }
-  
-  .inner {
-    padding-inline: 15px;
-  
-    @include mq(md) {
-      max-width: calc(1200px + 40px * 2);
-      margin-inline: auto;
-      padding-inline: 40px;
-    }
-  }
+}

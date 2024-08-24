@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}
+
+body {
+  font-family: "Noto Serif JP", "Poppins";
+  color: #9a8b92;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  background: #ffeff8;
+}
+
+@media screen and (min-width: 600px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .hidden-xl {
+    display: none;
+  }
+}
+.inner {
+  padding-inline: 15px;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 40px;
+  }
+}

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>HARUKA SHOP</title>
-    <meta name="description" content="“可愛い” で地球を守る！" />
+    <title>Haruka kawaii shop</title>
+    <meta name="description" content="Haruka kawaii shop" />
 
-    <link rel="icon" href="./img/favicon .ico" />
+    <link rel="icon" href= />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +22,49 @@
 
   <body>
     <header class="header">
-      <div class="header__inner"></div>
+      <div class="header__inner inner">
+        <h1 class="header__logo">
+          <a href="/"><img src="./img/shoplogo.png" alt="sobolon" /></a>
+        </h1>
+        <button
+          id="js-drawer-button"
+          type="button"
+          class="header__icon drawer-icon"
+        >
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+
+        <nav id="js-drawer-content" class="header-nav">
+          <ul class="header__lists">
+            <li class="header__list">
+              <a href="" class="header__link">CONCEPT</a>
+            </li>
+            <li class="header__list">
+              <a href="" class="header__link">GALLERY</a>
+            </li>
+            <li class="header__list">
+              <a href="" class="header__link">CONTACT & ORDER</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <main class="main">
+      <div class="fv">
+        <div class="fv__inner inner">
+          <picture class="fv__image">
+            <img src="./img/shopmark.png" alt="" />
+          </picture>
+        </div>
+      </div>
+    </main>
+
+    <section class="concept"></section>
+
+    <section class="gallery"></section>
 
     <script src="./js/script.js"></script>
   </body>
