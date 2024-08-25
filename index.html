@@ -16,6 +16,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -26,6 +31,7 @@
         <h1 class="header__logo">
           <a href="/"><img src="./img/shoplogo.png" alt="sobolon" /></a>
         </h1>
+
         <button
           id="js-drawer-button"
           type="button"
@@ -36,16 +42,18 @@
           <span class="drawer-icon__bar"></span>
         </button>
 
-        <nav id="js-drawer-content" class="header-nav">
+        <nav id="js-drawer-content" class="header__nav">
           <ul class="header__lists">
             <li class="header__list">
-              <a href="" class="header__link">CONCEPT</a>
+              <a href="#concept" class="header__link">CONCEPT</a>
             </li>
             <li class="header__list">
-              <a href="" class="header__link">GALLERY</a>
+              <a href="#gallery" class="header__link">GALLERY</a>
             </li>
             <li class="header__list">
-              <a href="" class="header__link">CONTACT & ORDER</a>
+              <a href="#contact & order" class="header__link"
+                >CONTACT & ORDER</a
+              >
             </li>
           </ul>
         </nav>
@@ -60,12 +68,19 @@
           </picture>
         </div>
       </div>
+
+      <section class="concept">
+        <div class="cocept__inner inner">
+          <h2 class="heading section__head">CONCEPT</h2>
+        </div>
+      </section>
+
+      <section class="gallery"></section>
     </main>
 
-    <section class="concept"></section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <section class="gallery"></section>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
