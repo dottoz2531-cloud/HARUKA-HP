@@ -7,7 +7,7 @@
     <title>Haruka kawaii shop</title>
     <meta name="description" content="Haruka kawaii shop" />
 
-    <link rel="icon" href= />
+    <link rel="icon" href="./img/cart.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,16 +31,30 @@
         <h1 class="header__logo">
           <a href="/"><img src="./img/shoplogo.png" alt="sobolon" /></a>
         </h1>
+        <div class="header__items">
+          <ul class="header__sns-items">
+            <li class="header__sus-item">
+              <a href="" class="header__sns-link"
+                ><img class="is-instagram" src="./img/instagram.png" alt=""
+              /></a>
+            </li>
+            <li class="header__sus-item">
+              <a href="" class="header__sns-link"
+                ><img class="is-line" src="./img/line.png" alt=""
+              /></a>
+            </li>
+          </ul>
 
-        <button
-          id="js-drawer-button"
-          type="button"
-          class="header__icon drawer-icon"
-        >
-          <span class="drawer-icon__bar"></span>
-          <span class="drawer-icon__bar"></span>
-          <span class="drawer-icon__bar"></span>
-        </button>
+          <button
+            id="js-drawer-button"
+            type="button"
+            class="header__icon drawer-icon"
+          >
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+            <span class="drawer-icon__bar"></span>
+          </button>
+        </div>
 
         <nav id="js-drawer-content" class="header__nav">
           <ul class="header__lists">
@@ -51,9 +65,7 @@
               <a href="#gallery" class="header__link">GALLERY</a>
             </li>
             <li class="header__list">
-              <a href="#contact & order" class="header__link"
-                >CONTACT & ORDER</a
-              >
+              <a href="#contact&oder" class="header__link">CONTACT & ORDER</a>
             </li>
           </ul>
         </nav>
@@ -72,14 +84,125 @@
       <section class="concept">
         <div class="cocept__inner inner">
           <h2 class="heading section__head">CONCEPT</h2>
+
+          <div class="concept__slider">
+            <!-- Slider main container -->
+            <div id="js-concept-swiper" class="swiper concept__swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/4.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/5.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/6.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div
+                id="js-concept-pagination"
+                class="swiper-pagination concept__pagination"
+              ></div>
+            </div>
+          </div>
+          <div class="concept__texts">
+            <div class="concept__text">
+              オーダーケーキ、カップケーキ<br />アイシングクッキーや琥珀糖など、
+              <br /><span>”かわいい”</span>をテーマに製作しています。
+            </div>
+            <div class="concept__text">
+              かわいい世界観はもちろん<br />モチーフやテーマに沿った<br />おまかせデザインも得意としています。
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="gallery"></section>
+      <section class="gallery">
+        <div class="gallery__inner inner">
+          <h2 class="heading heading--type2">GALLERY</h2>
+          <div class="gallery__cards">
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/cake.png" alt="cake" />
+              </div>
+              <div class="gallery-card__text">
+                <p class="card-text">CAKE</p>
+              </div>
+            </a>
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/cookie.png" alt="cookie" />
+              </div>
+              <div class="gallery-card__text gallery-card__text--type2">
+                <p class="card-text">COOKIE</p>
+              </div>
+            </a>
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/cupcake.png" alt="cupcake" />
+              </div>
+              <div class="gallery-card__text gallery-card__text--type3">
+                <p class="card-text">CUPCAKE</p>
+              </div>
+            </a>
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/event.png" alt="event" />
+              </div>
+              <div class="gallery-card__text gallery-card__text--type4">
+                <p class="card-text">EVENT</p>
+              </div>
+            </a>
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/oshikatu.png" alt="oshikatu" />
+              </div>
+              <div class="gallery-card__text gallery-card__text--type5">
+                <p class="card-text">OSHIKATU</p>
+              </div>
+            </a>
+            <a href="" class="gallery__card gallery-card">
+              <div class="gallery-card__img">
+                <img src="./img/img-gallery/others.png" alt="others" />
+              </div>
+              <div class="gallery-card__text gallery-card__text--type6">
+                <p class="card-text">OTHERS</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="contact__inner inner">
+          <h2 class="heading heading-contact">CONTACT</h2>
+          <div class="contact__line">
+            <img src="./img/line url.png" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
