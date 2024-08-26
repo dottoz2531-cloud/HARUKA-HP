@@ -97,7 +97,7 @@ main {
   }
 }
 
-header {
+.header {
   height: 60px;
   position: sticky;
   top: 0;
@@ -107,7 +107,7 @@ header {
   border-bottom: 3px solid #ffeff8;
 }
 @media screen and (min-width: 768px) {
-  header {
+  .header {
     height: 70px;
   }
 }
@@ -407,22 +407,49 @@ main {
   font-size: 14px;
 }
 .gallery-card__text:hover {
-  opacity: 1;
+  background-color: rgba(255, 158, 228, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .gallery-card__text--type2 {
   background-color: rgba(106, 184, 228, 0.4);
 }
+.gallery-card__text--type2:hover {
+  background-color: rgba(106, 184, 228, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 .gallery-card__text--type3 {
   background-color: rgba(106, 228, 214, 0.4);
+}
+.gallery-card__text--type3:hover {
+  background-color: rgba(106, 228, 214, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .gallery-card__text--type4 {
   background-color: rgba(238, 223, 86, 0.4);
 }
+.gallery-card__text--type4:hover {
+  background-color: rgba(238, 223, 86, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 .gallery-card__text--type5 {
   background-color: rgba(228, 158, 106, 0.4);
 }
+.gallery-card__text--type5:hover {
+  background-color: rgba(228, 158, 106, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 .gallery-card__text--type6 {
   background-color: rgba(86, 104, 217, 0.4);
+}
+.gallery-card__text--type6:hover {
+  background-color: rgba(86, 104, 217, 0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contact__inner {
@@ -439,4 +466,33 @@ main {
 .contact__line img {
   width: 100%;
   border-radius: 20px;
+}
+
+.contact__texts {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 17px;
+  font-size: 14px;
+}
+
+.contact__text {
+  text-align: center;
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer__logo img {
+  width: 182px;
+}
+
+.footer__sns-link img {
+  width: 30px;
 }

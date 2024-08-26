@@ -113,7 +113,7 @@ main {
 
 //header//
 
-header {
+.header {
   height: $header-hight-sp;
   position: sticky;
   top: 0;
@@ -418,24 +418,48 @@ main {
   font-size: 14px;
 
   &:hover {
-    opacity: 1;
+    background-color: rgba(255, 158, 228, 0.8);
+    transition: 0.5s;
   }
 
   &--type2 {
     background-color: rgba(106, 184, 228, 0.4);
+    &:hover {
+      background-color: rgba(106, 184, 228, 0.8);
+      transition: 0.5s;
+    }
   }
 
   &--type3 {
     background-color: rgba(106, 228, 214, 0.4);
+    &:hover {
+      background-color: rgba(106, 228, 214, 0.8);
+      transition: 0.5s;
+    }
   }
+
   &--type4 {
     background-color: rgba(238, 223, 86, 0.4);
+    &:hover {
+      background-color: rgba(238, 223, 86, 0.8);
+      transition: 0.5s;
+    }
   }
+
   &--type5 {
     background-color: rgba(228, 158, 106, 0.4);
+    &:hover {
+      background-color: rgba(228, 158, 106, 0.8);
+      transition: 0.5s;
+    }
   }
+
   &--type6 {
     background-color: rgba(86, 104, 217, 0.4);
+    &:hover {
+      background-color: rgba(86, 104, 217, 0.8);
+      transition: 0.5s;
+    }
   }
 }
 
@@ -458,5 +482,47 @@ main {
   img {
     width: 100%;
     border-radius: 20px;
+  }
+}
+
+.contact__texts {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-size: 14px;
+}
+
+.contact__text {
+  text-align: center;
+}
+
+//footer
+
+.footer {
+  background-color: #ffff;
+}
+
+.footer__inner {
+}
+
+.footer__logo {
+  img {
+    width: 182px;
+  }
+}
+
+.footer__items {
+}
+
+.footer__sns-items {
+}
+
+.footer__sus-item {
+}
+
+.footer__sns-link {
+  img {
+    width: 30px;
   }
 }
