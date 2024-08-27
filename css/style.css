@@ -97,6 +97,21 @@ main {
   }
 }
 
+.fade-in-up {
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+.fade-in-up.is-in-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .header {
   height: 60px;
   position: sticky;
@@ -288,9 +303,9 @@ main {
   top: 16px;
 }
 
-main {
-  height: 374px;
+.fv {
   background: #fff;
+  padding-bottom: 28px;
 }
 
 .fv__image {
@@ -302,12 +317,21 @@ main {
   margin-top: 22px;
 }
 
+.concept {
+  background: #ffeff8;
+}
+
 .concept__slider {
   margin-top: 30px;
 }
 
 .concept__swiper {
   padding-right: 30%;
+}
+@media screen and (min-width: 768px) {
+  .concept__swiper {
+    padding-right: 0;
+  }
 }
 
 .content__swiper-slide {
@@ -385,6 +409,11 @@ main {
   gap: 10px;
   padding-inline: 15px;
 }
+@media screen and (min-width: 768px) {
+  .gallery__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .gallery__card {
   position: relative;
@@ -454,10 +483,12 @@ main {
 
 .contact__inner {
   padding-inline: 40px;
+  margin-bottom: 100px;
 }
 
 .heading-contact {
   text-align: center;
+  font-size: 31px;
 }
 
 .contact__line {
@@ -487,12 +518,53 @@ main {
 
 .footer {
   background-color: white;
+  padding-block: 50px;
+  text-align: center;
 }
 
 .footer__logo img {
   width: 182px;
+  display: block;
+  margin-inline: auto;
+}
+
+.footer__sns-items {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 22px;
 }
 
 .footer__sns-link img {
   width: 30px;
+}
+
+.footer__menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  font-size: 15px;
+  gap: 21px;
+}
+
+.footer__copyright {
+  background-color: #9a8b92;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
 }

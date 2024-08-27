@@ -111,6 +111,17 @@ main {
   }
 }
 
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s, transform 1s;
+
+  &.is-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 //header//
 
 .header {
@@ -282,11 +293,11 @@ main {
 
 //main
 main {
-  height: 374px;
-  background: #fff;
 }
 
 .fv {
+  background: #fff;
+  padding-bottom: 28px;
 }
 
 .fv__inner {
@@ -304,6 +315,7 @@ main {
 
 //concept
 .concept {
+  background: $main-color;
 }
 
 .cocept__inner {
@@ -318,6 +330,10 @@ main {
 
 .concept__swiper {
   padding-right: 30%;
+
+  @include mq(md) {
+    padding-right: 0;
+  }
 }
 
 .content__swiper {
@@ -393,6 +409,10 @@ main {
   text-align: center;
   gap: 10px;
   padding-inline: 15px;
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .gallery__card {
@@ -470,10 +490,12 @@ main {
 
 .contact__inner {
   padding-inline: 40px;
+  margin-bottom: 100px;
 }
 
 .heading-contact {
   text-align: center;
+  font-size: 31px;
 }
 
 .contact__line {
@@ -501,6 +523,9 @@ main {
 
 .footer {
   background-color: #ffff;
+  padding-block: 50px;
+
+  text-align: center;
 }
 
 .footer__inner {
@@ -509,13 +534,17 @@ main {
 .footer__logo {
   img {
     width: 182px;
+    display: block;
+    margin-inline: auto;
   }
 }
 
-.footer__items {
-}
-
 .footer__sns-items {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
 }
 
 .footer__sus-item {
@@ -525,4 +554,24 @@ main {
   img {
     width: 30px;
   }
+}
+
+.footer__menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 15px;
+  gap: 21px;
+}
+
+.footer__menu-item {
+}
+
+.footer__copyright {
+  background-color: #9a8b92;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
 }
