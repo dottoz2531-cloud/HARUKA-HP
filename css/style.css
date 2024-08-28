@@ -27,7 +27,7 @@ body {
     display: none;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 820px) {
   .hidden-lg {
     display: none;
   }
@@ -80,14 +80,9 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 600px) {
-  .heading {
-    font-size: 50px;
-  }
-}
 @media screen and (min-width: 768px) {
   .heading {
-    font-size: 70px;
+    font-size: 55px;
     gap: 24px;
   }
 }
@@ -417,7 +412,7 @@ main {
 @media screen and (min-width: 768px) {
   .concept__texts {
     margin-top: 80px;
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -475,6 +470,7 @@ main {
   position: relative;
   -webkit-box-shadow: 3px 3px 15px 0px rgba(96, 96, 96, 0.16);
           box-shadow: 3px 3px 15px 0px rgba(96, 96, 96, 0.16);
+  border-radius: 0 0 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -484,6 +480,7 @@ main {
   }
 }
 .gallery-card__img img {
+  border-radius: 10px;
   width: 100%;
   height: auto;
 }
@@ -507,6 +504,8 @@ main {
   bottom: 0;
   color: white;
   font-size: 17px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
 }
 @media screen and (min-width: 768px) {
   .gallery-card__text {
@@ -560,12 +559,12 @@ main {
 }
 
 .contact__inner {
-  padding-inline: 40px;
+  padding-inline: 11.5942028986%;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
   .contact__inner {
-    padding-inline: 250px;
+    padding-inline: 20.8333333333%;
     margin-bottom: 100px;
   }
 }
@@ -576,7 +575,7 @@ main {
 }
 @media screen and (min-width: 768px) {
   .heading-contact {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 .heading-contact::after {
@@ -590,6 +589,7 @@ main {
 }
 
 .contact__line {
+  padding-inline: 35px;
   text-align: center;
   display: block;
   margin-top: 45px;
@@ -602,7 +602,7 @@ main {
   }
 }
 .contact__line img {
-  width: 100%;
+  max-width: 260px;
   border-radius: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -612,7 +612,10 @@ main {
 }
 
 .contact__texts {
-  margin-top: 25px;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,17 +624,22 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 17px;
-  font-size: 14px;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .contact__texts {
     margin-top: 60px;
-    font-size: 22px;
+    font-size: 20px;
+    gap: 30px;
   }
 }
 
 .contact__text {
   text-align: center;
+}
+.contact__text span {
+  color: #23db51;
+  font-weight: bold;
 }
 .contact__text--type2 {
   font-weight: bold;
