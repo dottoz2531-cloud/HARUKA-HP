@@ -29,22 +29,11 @@
     <header class="header">
       <div class="header__inner inner">
         <h1 class="header__logo">
-          <a href="/"><img src="./img/shoplogo.png" alt="sobolon" /></a>
+          <a href="/"
+            ><img src="./img/shoplogo.png" alt="Haruka kawaii shop"
+          /></a>
         </h1>
         <div class="header__items">
-          <ul class="header__sns-items">
-            <li class="header__sus-item">
-              <a href="" class="header__sns-link"
-                ><img class="is-instagram" src="./img/instagram.png" alt=""
-              /></a>
-            </li>
-            <li class="header__sus-item">
-              <a href="" class="header__sns-link"
-                ><img class="is-line" src="./img/line.png" alt=""
-              /></a>
-            </li>
-          </ul>
-
           <button
             id="js-drawer-button"
             type="button"
@@ -59,13 +48,13 @@
         <nav id="js-drawer-content" class="header__nav">
           <ul class="header__lists">
             <li class="header__list">
-              <a href="#concept" class="header__link">CONCEPT</a>
+              <a href="#cocept" class="header__link">CONCEPT</a>
             </li>
             <li class="header__list">
               <a href="#gallery" class="header__link">GALLERY</a>
             </li>
             <li class="header__list">
-              <a href="#contact&oder" class="header__link">CONTACT & ORDER</a>
+              <a href="#contact" class="header__link">CONTACT & ORDER</a>
             </li>
           </ul>
         </nav>
@@ -81,7 +70,7 @@
         </div>
       </div>
 
-      <section class="concept">
+      <section id="cocept" class="concept">
         <div class="cocept__inner inner">
           <h2 class="heading section__head js-in-view fade-in-up">CONCEPT</h2>
 
@@ -108,12 +97,22 @@
                 </div>
                 <div class="swiper-slide gallery__slide">
                   <div class="content__swiper-slide">
+                    <img src="./img/img-concept/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
                     <img src="./img/img-concept/5.png" alt="" />
                   </div>
                 </div>
                 <div class="swiper-slide gallery__slide">
                   <div class="content__swiper-slide">
                     <img src="./img/img-concept/6.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                  <div class="content__swiper-slide">
+                    <img src="./img/img-concept/7.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -126,17 +125,21 @@
           </div>
           <div class="concept__texts">
             <div class="concept__text">
-              オーダーケーキ、カップケーキ<br />アイシングクッキーや琥珀糖など、
-              <br /><span>”かわいい”</span>をテーマに製作しています。
+              オーダーケーキ、カップケーキ<br
+                class="hidden-md"
+              />アイシングクッキーや琥珀糖など、 <br /><span>”かわいい”</span
+              >をテーマに製作しています。
             </div>
             <div class="concept__text">
-              かわいい世界観はもちろん<br />モチーフやテーマに沿った<br />おまかせデザインも得意としています。
+              かわいい世界観はもちろん<br />モチーフやテーマに沿った、<br
+                class="hidden-md"
+              />おまかせデザインも得意としています。
             </div>
           </div>
         </div>
       </section>
 
-      <section class="gallery">
+      <section id="gallery" class="gallery">
         <div class="gallery__inner inner">
           <h2 class="heading heading--type2 js-in-view fade-in-up">GALLERY</h2>
           <div class="gallery__cards">
@@ -192,7 +195,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact__inner inner">
           <h2 class="heading heading-contact js-in-view fade-in-up">
             CONTACT & ORDER
@@ -201,8 +204,10 @@
             <img src="./img/line url.png" alt="" />
           </div>
           <div class="contact__texts">
-            <p class="contact__text">
-              お問い合わせ、ご注文、お見積もりは、<br />LINEにて受け付けております。
+            <p class="contact__text contact__text--type2">
+              お問い合わせ、ご注文、お見積もりは、<br
+                class="hidden-md"
+              />LINEにて受け付けております。
             </p>
             <p class="contact__text">
               恐れ入りますが、友達登録をしていただき、<br />チャットにて対応させていただきます。
@@ -216,29 +221,22 @@
         <div class="footer__logo">
           <img src="./img/shoplogo.png" alt="" />
         </div>
-        <ul class="footer__sns-items">
-          <li class="footer__sus-item">
-            <a href="" class="footer__sns-link"
-              ><img class="is-instagram" src="./img/instagram.png" alt=""
-            /></a>
-          </li>
-          <li class="footer__sus-item">
-            <a href="" class="footer__sns-link"
-              ><img class="is-line" src="./img/line.png" alt=""
-            /></a>
-          </li>
-        </ul>
-        <ul class="footer__menu-items">
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">CONCEPT</a>
-          </li>
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">GARALLY</a>
-          </li>
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">CONTACT & ORDER</a>
-          </li>
-        </ul>
+        <div class="footer__menu-item">
+          <ul class="footer__sns-items">
+            <li class="footer__sus-item">
+              <a
+                href="https://www.instagram.com/haruka.kawaiishop?igsh=cmt4ZGUydWNrODZh"
+                class="footer__sns-link"
+                ><img class="is-instagram" src="./img/instagram.png" alt=""
+              /></a>
+            </li>
+            <li class="footer__sus-item">
+              <a href="https://lin.ee/i8XduPG" class="footer__sns-link"
+                ><img class="is-line" src="./img/line.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
     <p class="footer__copyright">

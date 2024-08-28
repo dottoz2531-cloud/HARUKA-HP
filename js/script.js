@@ -45,6 +45,31 @@ const swiper = new Swiper("#js-concept-swiper", {
     delay: 7000, //　デフォルトの表示時間を指定
   },
 
+  breakpoints: {
+    768: {
+      spaceBetween: 6,
+      slidesPerView: 2.5,
+      loop: true,
+      speed: 800,
+
+      autoplay: {
+        delay: 7000, //デフォルトの表示時間を指定
+      },
+    },
+  },
+  breakpoints: {
+    900: {
+      spaceBetween: 6,
+      slidesPerView: 2,
+      loop: true,
+      speed: 800,
+
+      autoplay: {
+        delay: 7000, //デフォルトの表示時間を指定
+      },
+    },
+  },
+
   // If we need pagination
   pagination: {
     el: "#js-concept-pagination",

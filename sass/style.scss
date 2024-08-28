@@ -6,7 +6,7 @@ $text-color: #9a8b92;
 $font-base: "Noto Serif JP", "Poppins";
 
 $header-hight-sp: 60px;
-$header-hight-pc: 70px;
+$header-hight-pc: 80px;
 
 $breakpoints: (
   sm: "screen and (min-width: 600px)",
@@ -91,11 +91,25 @@ main {
   gap: 10px;
   align-items: center;
 
+  @include mq(sm) {
+    font-size: 50px;
+  }
+
+  @include mq(md) {
+    font-size: 70px;
+    gap: 24px;
+  }
+
   &::after {
     content: "";
     width: 160px;
     height: 3px;
     background: #fff;
+
+    @include mq(md) {
+      width: 320px;
+      height: 5px;
+    }
   }
 
   &--type2 {
@@ -103,11 +117,6 @@ main {
       content: "";
       background: $main-color;
     }
-  }
-
-  @include mq(md) {
-    font-size: 40px;
-    gap: 24px;
   }
 }
 
@@ -143,13 +152,21 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq(md) {
+  }
 }
 
 .header__logo {
+  left: 0;
   a {
     img {
       width: 96px;
       display: block;
+
+      @include mq(md) {
+        width: 130px;
+      }
     }
   }
 }
@@ -159,20 +176,9 @@ main {
   align-items: center;
   justify-content: center;
   gap: 28px;
-}
 
-.header__sns-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-
-.header__sus-item {
-  a {
-    img {
-      width: 30px;
-    }
+  @include mq(md) {
+    gap: 0;
   }
 }
 
@@ -235,12 +241,13 @@ main {
 
   @include mq(md) {
     color: #fa81b4;
-    font-size: 16px;
+    font-size: 22px;
     padding-bottom: 0;
     transition: color 0.3s;
 
     &:hover {
-      color: $main-color;
+      opacity: 0.4;
+      transition: 0.5s;
     }
   }
 }
@@ -291,13 +298,17 @@ main {
   }
 }
 
-//main
 main {
 }
 
+//fv
 .fv {
   background: #fff;
   padding-bottom: 28px;
+
+  @include mq(md) {
+    padding-bottom: 90px;
+  }
 }
 
 .fv__inner {
@@ -310,6 +321,11 @@ main {
   img {
     width: 320px;
     margin-top: 22px;
+
+    @include mq(md) {
+      width: 570px;
+      margin-top: 70px;
+    }
   }
 }
 
@@ -321,18 +337,25 @@ main {
 .cocept__inner {
 }
 
+.heading-contact {
+}
+
 .section__head {
 }
 
 .concept__slider {
   margin-top: 30px;
+
+  @include mq(md) {
+    margin-top: 80px;
+  }
 }
 
 .concept__swiper {
   padding-right: 30%;
 
   @include mq(md) {
-    padding-right: 0;
+    padding-right: 30%;
   }
 }
 
@@ -345,6 +368,9 @@ main {
   padding-left: 5px;
   margin-right: -5px;
   margin-left: -5px;
+  @include mq(md) {
+    flex-shrink: 0;
+  }
   img {
     max-width: 100%;
     height: auto;
@@ -380,6 +406,11 @@ main {
   text-align: center;
   gap: 15px;
   font-size: 14px;
+
+  @include mq(md) {
+    margin-top: 80px;
+    font-size: 22px;
+  }
 }
 
 .concept__text {
@@ -395,11 +426,21 @@ main {
   background: #fff;
   border-radius: 20px;
   margin-inline: 15px;
+
+  @include mq(md) {
+    border-radius: 50px;
+    margin-inline: 70px;
+  }
 }
 
 .gallery__inner {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @include mq(md) {
+    padding-top: 95px;
+    padding-bottom: 165px;
+  }
 }
 
 .gallery__cards {
@@ -410,16 +451,27 @@ main {
   gap: 10px;
   padding-inline: 15px;
 
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @include mq(md) {
+    margin-top: 50px;
     grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-inline: calc(120px / 1200px * 100%);
   }
 }
 
 .gallery__card {
   position: relative;
+  box-shadow: 3px 3px 15px 0px rgba(96, 96, 96, 0.16);
 }
 
 .gallery-card__img {
+  @include mq(md) {
+    flex-shrink: 0;
+  }
   img {
     width: 100%;
     height: auto;
@@ -428,14 +480,21 @@ main {
 
 .gallery-card__text {
   width: 100%;
-  height: 40px;
+  height: 25%;
   position: absolute;
   background-color: rgba(255, 158, 228, 0.4);
-  padding: 13px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   left: 0;
   bottom: 0;
   color: #ffff;
-  font-size: 14px;
+  font-size: 17px;
+
+  @include mq(md) {
+    font-size: 22px;
+  }
 
   &:hover {
     background-color: rgba(255, 158, 228, 0.8);
@@ -491,19 +550,48 @@ main {
 .contact__inner {
   padding-inline: 40px;
   margin-bottom: 100px;
+
+  @include mq(md) {
+    padding-inline: 250px;
+    margin-bottom: 100px;
+  }
 }
 
 .heading-contact {
   text-align: center;
   font-size: 31px;
+
+  @include mq(md) {
+    font-size: 70px;
+  }
+
+  &::after {
+    content: "";
+    width: 290px;
+
+    @include mq(md) {
+      width: 650px;
+    }
+  }
 }
 
 .contact__line {
+  text-align: center;
+  display: block;
   margin-top: 45px;
+
+  @include mq(md) {
+    margin-top: 90px;
+    flex-shrink: 0;
+  }
 
   img {
     width: 100%;
     border-radius: 20px;
+
+    @include mq(md) {
+      max-width: 500px;
+    }
   }
 }
 
@@ -513,10 +601,20 @@ main {
   flex-direction: column;
   gap: 17px;
   font-size: 14px;
+
+  @include mq(md) {
+    margin-top: 60px;
+    font-size: 22px;
+  }
 }
 
 .contact__text {
   text-align: center;
+
+  &--type2 {
+    font-weight: bold;
+    color: #333;
+  }
 }
 
 //footer
@@ -525,7 +623,9 @@ main {
   background-color: #ffff;
   padding-block: 50px;
 
-  text-align: center;
+  @include mq(md) {
+    padding-block: 50px 70px;
+  }
 }
 
 .footer__inner {
@@ -536,36 +636,42 @@ main {
     width: 182px;
     display: block;
     margin-inline: auto;
+
+    @include mq(md) {
+      width: 300px;
+    }
   }
+}
+.footer__menu-item {
 }
 
 .footer__sns-items {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-}
+  gap: 20px;
 
-.footer__sus-item {
-}
-
-.footer__sns-link {
-  img {
-    width: 30px;
+  @include mq(md) {
+    gap: 30px;
   }
 }
 
-.footer__menu-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  font-size: 15px;
-  gap: 21px;
-}
+.footer__sus-item {
+  a {
+    img {
+      width: 30px;
 
-.footer__menu-item {
+      @include mq(md) {
+        width: 40px;
+      }
+    }
+    &:hover {
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+  }
 }
 
 .footer__copyright {
