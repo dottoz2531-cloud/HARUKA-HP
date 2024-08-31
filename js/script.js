@@ -60,7 +60,7 @@ const swiper = new Swiper("#js-concept-swiper", {
   breakpoints: {
     900: {
       spaceBetween: 6,
-      slidesPerView: 2.5,
+      slidesPerView: 1.8,
       loop: true,
       speed: 800,
 

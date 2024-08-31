@@ -219,7 +219,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 40px;
+  gap: 15px;
 
   @include mq(md) {
     flex-direction: row;
@@ -230,17 +230,12 @@ main {
 
 .header__sns-items {
   display: flex;
-  gap: 20px;
 }
 
 .header__sus-item {
   a {
     img {
-      width: 30px;
-
-      @include mq(md) {
-        width: 35px;
-      }
+      width: 65px;
     }
     &:hover {
       opacity: 0.6;

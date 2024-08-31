@@ -223,7 +223,7 @@ main {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  gap: 40px;
+  gap: 15px;
 }
 @media screen and (min-width: 768px) {
   .drawer__items {
@@ -242,16 +242,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
 }
 
 .header__sus-item a img {
-  width: 30px;
-}
-@media screen and (min-width: 768px) {
-  .header__sus-item a img {
-    width: 35px;
-  }
+  width: 65px;
 }
 .header__sus-item a:hover {
   opacity: 0.6;
