@@ -467,7 +467,7 @@ main {
 
   @include mq(md) {
     padding-top: 95px;
-    padding-bottom: 165px;
+    padding-bottom: 100px;
   }
 }
 
@@ -479,15 +479,12 @@ main {
   gap: 10px;
   padding-inline: 15px;
 
-  @include mq(sm) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   @include mq(md) {
     margin-top: 50px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding-inline: calc(120px / 1200px * 100%);
+    gap: 15px;
+    padding-inline: calc(80px / 1200px * 100%);
   }
 }
 
