@@ -710,6 +710,22 @@ main {
   padding: 14px 0;
 }
 
+.gallery_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 768px) {
+  .gallery_main {
+    gap: 60px;
+  }
+}
+
 .sub-menu__inner {
   margin-block: 40px;
   margin-inline: 15px;
@@ -754,6 +770,7 @@ main {
 .sub-item {
   position: relative;
   padding: 5px 20px;
+  border: solid 1px #fff;
   background-color: rgba(255, 158, 228, 0.9);
 }
 .sub-item:hover {
@@ -810,4 +827,21 @@ main {
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   gap: 5px;
+}
+
+.cake-card img {
+  width: 100%;
+}
+.cake-card img .cake-cards {
+  margin-block: 50px;
+}
+.cake-card img .cake__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 5px;
+}
+.cake-card img .cake-card img {
+  width: 100%;
+  height: auto;
 }
